@@ -1,0 +1,28 @@
+.done {
+  color: green;
+  text-decoration: line-through;
+}
+
+.btn {
+  margin-left: 5px;
+}
+
+#btnFunction {
+  float: right;
+}
+
+/* .edit-popup {
+  float: right;
+} */
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  margin-top: 4px;
+}
+
+div {
+  padding: 5px;
+}

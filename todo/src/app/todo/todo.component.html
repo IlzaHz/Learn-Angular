@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="title">
+      <h1>To Do List</h1>
+    </div>
+  </div>
+  <div class="row align-self-center">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <div class="sections">
+        <div class="edit-popup" *ngIf="show">
+          <input type="text" name="" class="edit-item" value="{{ value }}" #item>
+          <button class="btn btn-primary btn-sm btn-update" (click)="update(item.value)">Update</button>
+        </div>
+        <input type="text" name="" class="item" onfocus="this.value=''" #item>
+        <button class="btn btn-primary btn-sm btn-add-item" (click)="create(item.value)">Add</button>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let item of dummyData">
+            <span [ngClass]="{ 'done': item.done }">{{ item.title }}</span>
+            <button class="btn btn-danger btn-sm" id="btnFunction" (click)="remove(item.id)">Delete</button>
+            <button class="btn btn-primary btn-sm" id="btnFunction" (click)="edit(item.id, item.title)">Edit</button>
+            <button class="btn btn-success btn-sm" id="btnFunction" (click)="setTaskComplete(item.id)">Complete</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>
